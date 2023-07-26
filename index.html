@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<html data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FruitBrust</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'basic': '#F85559',
+                'fc': '#121212'
+                
+              }
+            }
+          }
+        }
+      </script>
+      <style>
+        .font-lato{
+            font-family: 'Lato', sans-serif;
+        }
+      </style>
+</head>
+<body class="font-lato text-fc">
+    <header class="container mx-auto">
+        <nav class="py-4">
+            <div class="navbar md:bg-basic rounded-full">
+                <div class="navbar-center text-white hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                      <li><a>Home</a></li>
+                      <li><a>About us</a></li>
+                      <li><a>Shop</a></li>
+                      <li><a>All Fruits</a></li>
+                    </ul>
+                  </div>
+                <div class="flex-1 lg:justify-center justify-start">
+                  <a class="btn btn-ghost normal-case text-2xl md:text-white font-extrabold"><img class="w-8" src="images/logo.png" alt="">Fruit Brust</a>
+                </div>
+                <div class="flex-none px-2 md:px-4 lg:px-6">
+                  <div class="form-control hidden md:block relative">
+                    <input type="text" placeholder="Search here" class=" py-2 rounded-full px-2 w-24 md:w-auto" />
+                    <svg class="absolute fill-[#121212] top-2 left-40" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#1b1f27}</style><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                  </div>
+                  <div class="dropdown dropdown-end lg:hidden md:block">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                      <div class="w-10 rounded-full">
+                        <img src="/images/IMG_20230527_115144.png" />
+                      </div>
+                    </label>
+                    <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                      
+                      <li><a>Shop</a></li>
+                      <li><a>All Fruits</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        </nav>
+        <section>
+            <div class="relative">
+                <div>
+                    <div class="carousel w-full">
+                        <div id="slide1" class="carousel-item relative w-full">
+                            <div class="hero md:h-96" style="background-image: url(images/banner1.png);">
+                                <div class="hero-overlay bg-opacity-60"></div>
+                                <div class="hero-content text-center text-neutral-content">
+                                  <div class="max-w-md text-white">
+                                    <h1 class="mb-5 text-2xl md:text-5xl font-lato font-bold">Exotic tastes at your<br> doorstep</h1>
+                                    <p class="mb-5">We supply highly quality organic products</p>
+                                    <button class="btn bg-basic outline-none border-none text-white">Shop Now</button>
+                                  </div>
+                                </div>
+                              </div>
+                          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide4" class="btn btn-circle bg-opacity-60 border-none">❮</a> 
+                            <a href="#slide2" class="btn btn-circle bg-opacity-60 border-none">❯</a>
+                          </div>
+                        </div> 
+                        <div id="slide2" class="carousel-item relative w-full">
+                            <div class="hero md:h-96" style="background-image: url(images/banner2.png);">
+                                <div class="hero-overlay bg-opacity-60"></div>
+                                <div class="hero-content text-center text-neutral-content">
+                                  <div class="max-w-md text-white">
+                                    <h1 class="mb-5 text-2xl md:text-5xl font-lato font-bold">Exotic tastes at your<br> doorstep</h1>
+                                    <p class="mb-5">We supply highly quality organic products</p>
+                                    <button class="btn bg-basic outline-none border-none text-white">Shop Now</button>
+                                  </div>
+                                </div>
+                              </div>
+                          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide1" class="btn btn-circle bg-opacity-60 border-none">❮</a> 
+                            <a href="#slide3" class="btn btn-circle bg-opacity-60 border-none">❯</a>
+                          </div>
+                        </div> 
+                        <div id="slide3" class="carousel-item relative w-full">
+                            <div class="hero md:h-96" style="background-image: url(images/banner3.png);">
+                                <div class="hero-overlay bg-opacity-60"></div>
+                                <div class="hero-content text-center text-neutral-content">
+                                  <div class="max-w-md text-white">
+                                    <h1 class="mb-5 text-2xl md:text-5xl font-lato font-bold">Exotic tastes at your<br> doorstep</h1>
+                                    <p class="mb-5">We supply highly quality organic products</p>
+                                    <button class="btn bg-basic outline-none border-none text-white">Shop Now</button>
+                                  </div>
+                                </div>
+                              </div>
+                          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide2" class="btn btn-circle bg-opacity-60 border-none">❮</a> 
+                            <a href="#slide4" class="btn btn-circle bg-opacity-60 border-none">❯</a>
+                          </div>
+                        </div> 
+                        <div id="slide4" class="carousel-item relative w-full">
+                            <div class="hero md:h-96" style="background-image: url(images/banner4.png);">
+                                <div class="hero-overlay bg-opacity-60"></div>
+                                <div class="hero-content text-center text-neutral-content">
+                                  <div class="max-w-md text-white">
+                                    <h1 class="mb-5 text-2xl md:text-5xl font-lato font-bold">Exotic tastes at your<br> doorstep</h1>
+                                    <p class="mb-5">We supply highly quality organic products</p>
+                                    <button class="btn bg-basic outline-none border-none text-white">Shop Now</button>
+                                  </div>
+                                </div>
+                              </div>
+                          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                            <a href="#slide3" class="btn btn-circle bg-opacity-60 border-none">❮</a> 
+                            <a href="#slide1" class="btn btn-circle bg-opacity-60 border-none">❯</a>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="absolute top-4/5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex bg-white rounded-lg p-2 text-black text-center hidden md:flex drop-shadow-lg ">
+                    <div class="flex flex-col justify-center">
+                        <img src="images/fruit1.png" alt="">
+                        <p>Blackberry</p>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <img src="images/fruit2.png" alt="">
+                        <p>Orange</p>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <img src="images/fruit3.png" alt="">
+                        <p>Mango</p>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <img src="images/fruit4.png" alt="">
+                        <p>Strawberry</p>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <img src="images/fruit5.png" alt="">
+                        <p>Bedana</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="container mx-auto">
+        <section>
+            <div>
+                <div class="flex flex-col md:flex-row lg:flex-row justify-between pt-8 pb-6 md:pt-36 md:pb-20">
+                    <div class="md:w-1/2 lg:w-1/2">
+                        <h1 class="font-lato text-2xl md:text-5xl font-extrabold text-center md:text-start">Deal of the day</h1>
+                        <p class="md:text-start text-center">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                    </div>
+                    <div class=" flex justify-center py-2 md:py-0">
+                        <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                            <div class="flex flex-col">
+                              <span class="countdown font-mono text-5xl">
+                                <span style="--value:29;"></span>
+                              </span>
+                              days
+                            </div> 
+                            <div class="flex flex-col">
+                              <span class="countdown font-mono text-5xl">
+                                <span style="--value:15;"></span>
+                              </span>
+                              hours
+                            </div> 
+                            <div class="flex flex-col">
+                              <span class="countdown font-mono text-5xl">
+                                <span style="--value:25;"></span>
+                              </span>
+                              min
+                            </div> 
+                            <div class="flex flex-col">
+                              <span class="countdown font-mono text-5xl">
+                                <span style="--value:08;"></span>
+                              </span>
+                              sec
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center">
+                    <!-- modal -->
+                    <div><div>
+                        <div class="card lg:w-80 shadow-xl">
+                            <figure class="px-28 pt-10">
+                              <img src="/images/fruit6.png" alt="fruits" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class="card-title">12.90$ - 18.85$</h2>
+                              <p>Apples</p>
+                              <div class="rating w-32 rating-lg rating-half">
+                                <input type="radio" name="rating-10" class="rating-hidden" />
+                                <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" checked />
+                                <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                              </div>
+                              <div class="card-actions">
+                                <!-- Open the modal using ID.showModal() method -->
+                                <button class="btn bg-transparent text-basic" onclick="my_modal_1.showModal()">Details</button>
+                                <dialog id="my_modal_1" class="modal">
+                                <form method="dialog" class="modal-box bg-white  text-black">
+                                    <figure class="">
+                                        <img src="/images/fruit6.png" alt="fruits" class="rounded-xl" />
+                                      </figure>
+                                      <div class="card-body items-center text-center">
+                                        <h2 class="card-title">Apple</h2>
+                                        <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                        <div class="rating w-32 rating-lg rating-half">
+                                          <input type="radio" name="rating-10" class="rating-hidden" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" checked />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                        </div>
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    
+                                    <div class="flex gap-4">
+                                        <button class="btn bg-transparent border-2 border-basic text-basic">Close</button>
+                                    <button class="btn bg-basic text-white font-bold">Buy Now</button>
+                                    </div>
+                                    </div>
+                                </form>
+                                </dialog>
+                              </div>
+                            </div>
+                          </div>
+                          
+                    </div></div>
+                    <div><div>
+                        <div class="card lg:w-80 shadow-xl">
+                            <figure class="px-24 pt-10">
+                              <img src="/images/fruit7.png" alt="fruits" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class="card-title">12.90$ - 18.85$</h2>
+                              <p>Orange</p>
+                              <div class="rating w-32 rating-lg rating-half">
+                                <input type="radio" name="rating-11" class="rating-hidden" />
+                                <input type="radio" name="rating-11" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-11" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-11" class="bg-basic mask mask-star-2 mask-half-1" checked />
+                                <input type="radio" name="rating-11" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-11" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-11" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-11" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-11" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-11" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-11" class="bg-basic mask mask-star-2 mask-half-2" />
+                              </div>
+                              <div class="card-actions">
+                                <!-- Open the modal using ID.showModal() method -->
+                                <button class="btn bg-transparent text-basic" onclick="my_modal_2.showModal()">Details</button>
+                                <dialog id="my_modal_2" class="modal">
+                                <form method="dialog" class="modal-box bg-white text-black">
+                                    <figure class="">
+                                        <img src="/images/fruit7.png" alt="fruits" class="rounded-xl" />
+                                      </figure>
+                                      <div class="card-body items-center text-center">
+                                        <h2 class="card-title">Orange</h2>
+                                        <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                        <div class="rating w-32 rating-lg rating-half">
+                                          <input type="radio" name="rating-10" class="rating-hidden" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" checked />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                        </div>
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    
+                                    <div class="flex gap-4">
+                                        <button class="btn bg-transparent border-2 border-basic text-basic">Close</button>
+                                    <button class="btn bg-basic text-white font-bold">Buy Now</button>
+                                    </div>
+                                    </div>
+                                </form>
+                                </dialog>
+                              </div>
+                            </div>
+                          </div>
+                          
+                    </div></div>
+                    <div><div>
+                        <div class="card lg:w-80 shadow-xl">
+                            <figure class="px-24 pt-10">
+                              <img src="/images/fruit8.png" alt="fruits" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class="card-title">12.90$ - 18.85$</h2>
+                              <p>Red Dragon</p>
+                              <div class="rating w-32 rating-lg rating-half">
+                                <input type="radio" name="rating-12" class="rating-hidden" />
+                                <input type="radio" name="rating-12" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-12" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-12" class="bg-basic mask mask-star-2 mask-half-1" checked />
+                                <input type="radio" name="rating-12" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-12" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-12" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-12" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-12" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-12" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-12" class="bg-basic mask mask-star-2 mask-half-2" />
+                              </div>
+                              <div class="card-actions">
+                                <!-- Open the modal using ID.showModal() method -->
+                                <button class="btn bg-transparent text-basic" onclick="my_modal_3.showModal()">Details</button>
+                                <dialog id="my_modal_3" class="modal">
+                                <form method="dialog" class="modal-box bg-white text-black">
+                                    <figure class="">
+                                        <img src="/images/fruit8.png" alt="fruits" class="rounded-xl" />
+                                      </figure>
+                                      <div class="card-body items-center text-center">
+                                        <h2 class="card-title">Red Dragon</h2>
+                                        <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                        <div class="rating w-32 rating-lg rating-half">
+                                          <input type="radio" name="rating-13" class="rating-hidden" />
+                                          <input type="radio" name="rating-13" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-13" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-13" class="bg-basic mask mask-star-2 mask-half-1" checked />
+                                          <input type="radio" name="rating-13" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-13" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-13" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-13" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-13" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-13" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-13" class="bg-basic mask mask-star-2 mask-half-2" />
+                                        </div>
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    
+                                    <div class="flex gap-4">
+                                        <button class="btn bg-transparent border-2 border-basic text-basic">Close</button>
+                                    <button class="btn bg-basic text-white font-bold">Buy Now</button>
+                                    </div>
+                                    </div>
+                                </form>
+                                </dialog>
+                              </div>
+                            </div>
+                          </div>
+                          
+                    </div></div>
+                    <div><div>
+                        <div class="card lg:w-80 shadow-xl">
+                            <figure class="px-24 pt-10">
+                              <img src="/images/fruit9.png" alt="fruits" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                              <h2 class="card-title">12.90$ - 18.85$</h2>
+                              <p>Banana</p>
+                              <div class="rating w-32 rating-lg rating-half">
+                                <input type="radio" name="rating-14" class="rating-hidden" />
+                                <input type="radio" name="rating-14" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-14" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-14" class="bg-basic mask mask-star-2 mask-half-1" checked />
+                                <input type="radio" name="rating-14" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-14" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-14" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-14" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-14" class="bg-basic mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-14" class="bg-basic mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-14" class="bg-basic mask mask-star-2 mask-half-2" />
+                              </div>
+                              <div class="card-actions">
+                                <!-- Open the modal using ID.showModal() method -->
+                                <button class="btn bg-transparent text-basic" onclick="my_modal_4.showModal()">Details</button>
+                                <dialog id="my_modal_4" class="modal">
+                                <form method="dialog" class="modal-box bg-white text-black">
+                                    <figure class="">
+                                        <img src="/images/fruit9.png" alt="fruits" class="rounded-xl" />
+                                      </figure>
+                                      <div class="card-body items-center text-center">
+                                        <h2 class="card-title">Banana</h2>
+                                        <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                                        <div class="rating w-32 rating-lg rating-half">
+                                          <input type="radio" name="rating-10" class="rating-hidden" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" checked />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-1" />
+                                          <input type="radio" name="rating-10" class="bg-basic mask mask-star-2 mask-half-2" />
+                                        </div>
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    
+                                    <div class="flex gap-4">
+                                        <button class="btn bg-transparent border-2 border-basic text-basic">Close</button>
+                                    <button class="btn bg-basic text-white font-bold">Buy Now</button>
+                                    </div>
+                                    </div>
+                                </form>
+                                </dialog>
+                              </div>
+                            </div>
+                          </div>
+                          
+                    </div></div>
+                </div>
+            </div>
+            <div class="text-center p-4">
+                <button class="btn bg-basic text-white font-extrabold ">Shop All</button>
+            </div>
+        </section>
+        <section>
+            <div class="hero" style="background-image: url(images/banner1.png);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="py-14">
+                        <div>
+                            <h1 class="mb-5 text-2xl md:text-5xl font-lato font-bold">Meet the team section</h1>
+                            <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                        </div>
+                        <div class="flex flex-col lg:flex-row lg:gap-40 md:flex-row md:gap-4 items-center text-white">
+                            <div class="flex flex-col justify-center items-center">
+                                <img class="w-40" src="images/member1.png" alt="">
+                                <h1 class="font-extrabold text-2xl ">Awlad Hossain</h1>
+                                <p>Fruits Expert</p>
+                                <div>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg></button>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                                    </button>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                                    </button>
+                                </div>
+                                
+                                    
+                                    
+                            </div>
+    
+                            <div class="flex flex-col justify-center items-center">
+                                <img class="w-40" src="images/member2.png" alt="">
+                                <h1 class="font-extrabold text-2xl">Safia Chowdhury</h1>
+                                <p>Fruits Expert</p>
+                                <div>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg></button>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                                    </button>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                                    </button>
+                                </div>
+                                
+                                    
+                                    
+                            </div>
+    
+                            <div class="flex flex-col justify-center items-center">
+                                <img class="w-40" src="images/member3.png" alt="">
+                                <h1 class="font-extrabold text-2xl">Rokib Hossain</h1>
+                                <p>Fruits Expert</p>
+                                <div>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg></button>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                                    </button>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                                    </button>
+                                </div>
+                                
+                                    
+                                    
+                            </div>
+    
+                            <div class="flex flex-col justify-center items-center">
+                                <img class="w-40" src="images/member4.png" alt="">
+                                <h1 class="font-extrabold text-2xl">Chaity</h1>
+                                <p>Fruits Expert</p>
+                                <div>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg></button>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                                    </button>
+                                    <button class="btn bg-transparent border-none p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#F85559}</style><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                                    </button>
+                                </div>
+                                
+                                    
+                                    
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </section>
+        <!-- main last -->
+        <section>
+            <div>
+                <div class="text-center pt-14 pb-10">
+                    <h1 class="mb-5 text-2xl md:text-5xl font-lato font-bold">Meet the team section</h1>
+                    <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+                <div class="flex items-center flex-col lg:flex-row">
+                    <div class="">
+                        <div class="flex gap-4 items-start py-6">
+                            <img class="w-12 bg-basic p-2 rounded-full" src="images/group 1.svg" alt="">
+                            <div class="">
+                                <h1 class="text-4xl font-bold underline-offset-8 underline pb-2">Dedicated Team</h1>
+
+                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            </div>
+
+                        </div>
+                        <div class="flex gap-4 items-start py-6">
+                            <img class="w-12 bg-basic p-2 rounded-full" src="images/love 1.svg" alt="">
+                            <div class="">
+                                <h1 class="text-4xl font-bold underline-offset-8 underline pb-2">Fresh is Best</h1>
+
+                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            </div>
+
+                        </div>
+                        <div class="flex gap-4 items-start py-6">
+                            <img class="w-12 bg-basic p-2 rounded-full" src="images/gift-box 1.svg" alt="">
+                            <div class="">
+                                <h1 class="text-4xl font-bold underline-offset-8 underline pb-2">Gift Certificates</h1>
+
+                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <img class="flex-1" src="images/whychoose1.png" alt="">
+                    </div>
+                    <div class=" text-right">
+                        <div class="flex gap-4 items-start py-6">
+                            
+                            <div class="">
+                                <h1 class="text-4xl font-bold underline-offset-8 underline pb-2">Integrated Supplier</h1>
+
+                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            </div>
+                            <img class="w-12 bg-basic p-2 rounded-full" src="images/fruit 1.svg" alt="">
+                        </div>
+                        <div class="flex gap-4 items-start py-6">
+                            
+                            <div class="">
+                                <h1 class="text-4xl font-bold underline-offset-8 underline pb-2">Sustainable Practice</h1>
+
+                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            </div>
+                            <img class="w-12 bg-basic p-2 rounded-full" src="images/ice-cream 1.svg" alt="">
+                        </div>
+                        <div class="flex gap-4 items-start py-6">
+                            
+                            <div class="">
+                                <h1 class="text-4xl font-bold underline-offset-8 underline pb-2">The Benefits Only</h1>
+
+                                <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                            </div>
+                            <img class="w-12 bg-basic p-2 rounded-full" src="images/like 1.svg" alt="">
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container mx-auto">
+        <section>
+            <div>
+                <footer class="footer footer-center py-4 md:p-10 bg-basic text-primary-content text-white">
+                    <div>
+                      <div class="flex items-center gap-4">
+                        <img class="w-8 md:w-auto" src="images/logo.png" alt="">
+                        <h1 class=" text-2xl md:text-5xl font-lato font-extrabold">Fruit Brust</h1>
+                      </div>
+                      <div class="grid grid-flow-col hidden md:block space-x-6 pt-6 ">
+                        <a class="link link-hover">Home</a> 
+                        <a class="link link-hover">About Us</a> 
+                        <a class="link link-hover">Shop</a> 
+                        <a class="link link-hover">All Fruits</a>
+                        <a class="link link-hover">Support</a> 
+                        <a class="link link-hover">My Account</a>
+                      </div> 
+
+
+                    </div> 
+                    <div class="grid grid-cols-4 sm:grid-cols-2 grid-flow-row gap-4 md:hidden">
+                        <div class="col-span-4 justify-content:center space-x-4">
+                            <a class="link link-hover">Home</a> 
+                            <a class="link link-hover">About Us</a> 
+                            <a class="link link-hover">Shop</a> 
+                            <a class="link link-hover">All Fruits</a> 
+                        </div>
+                        <div class="col-span-4 justify-content:center space-x-4">
+                            <a class="link link-hover">Support</a> 
+                            <a class="link link-hover">My Account</a>
+                        </div>
+                      </div> 
+                    <div>
+                      <div class="grid grid-flow-col gap-4 py-4">
+                        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a> 
+                        
+                        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+
+                        <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+
+                        <a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+
+                        <a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+
+                        <a><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a>
+                        
+                      </div>
+                      <p>Copyright © 2023 - All right reserved</p>
+                    </div>
+                  </footer>
+            </div>
+        </section>
+    </footer>
+        
+</body>
+</html>
